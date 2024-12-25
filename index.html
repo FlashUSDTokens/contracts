@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Flash USDT ($Tether) - Revolutionary Stablecoin | Binance Smart Chain</title>
+    
+    <!-- Primary SEO -->
+    <meta name="description" content="Flash USDT ($Tether) is the next-generation stablecoin on Binance Smart Chain (BSC). Lightning-fast transactions, ultra-low fees, and maximum security. Join the crypto revolution today!">
+    <meta name="keywords" content="Flash USDT, $Tether, stablecoin, Binance Smart Chain, BEP20, crypto, digital currency, DeFi, blockchain">
+    <meta name="author" content="Flash USDT Team">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://flashusdtokens.github.io/contracts/">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flashusdtokens.github.io/contracts/">
+    <meta property="og:title" content="Flash USDT ($Tether) - Revolutionary Stablecoin">
+    <meta property="og:description" content="Flash USDT is redefining stablecoins with blazing-fast speeds, ultra-low fees, and robust security on Binance Smart Chain (BSC).">
+    <meta property="og:image" content="https://flashusdtokens.github.io/contracts/logo/Logo.png">
+    <meta property="og:image:alt" content="Flash USDT Logo">
+    <meta property="og:locale" content="en_US">
 
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flash USDT ($Tether) - Revolutionary Stablecoin">
+    <meta name="twitter:description" content="Experience the fastest, most secure, and efficient stablecoin on Binance Smart Chain. Flash USDT is here to transform DeFi!">
+    <meta name="twitter:image" content="https://flashusdtokens.github.io/contracts/logo/Logo.png">
+    <meta name="twitter:site" content="@FlashUSDT">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/Logo.png" type="image/png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Flash USDT",
+        "url": "https://flashusdtokens.github.io/contracts/",
+        "logo": "https://flashusdtokens.github.io/contracts/logo/Logo.png",
+        "description": "Flash USDT ($Tether) is a next-generation stablecoin with fast transactions, minimal fees, and enhanced security on Binance Smart Chain.",
+        "sameAs": [
+            "https://twitter.com/FlashUSDT",
+            "https://t.me/FlashUSDTokens"
+        ]
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: radial-gradient(circle, #1a1a2e, #0f0f3a);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+        }
+        ::selection {
+            background-color: #3b82f6;
+            color: white;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1e3a8a;
+        }
+        nav a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #3b82f6;
+            transform: scale(1.05);
+        }
+        .btn {
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background: #2563eb;
+            transform: translateY(-3px);
+        }
+        footer {
+            background: #0f0f3a;
+            color: #a3a3a3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-black">
+        <div class="loader border-t-4 border-b-4 border-blue-500 rounded-full w-16 h-16"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="opacity-0 transition-opacity duration-500" id="mainContent">
+        <!-- Header -->
+        <header class="fixed w-full top-0 z-50">
+            <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="logo/Logo.png" alt="Flash USDT" class="h-12">
+                    <h1 class="text-2xl font-bold gradient-text">Flash USDT</h1>
+                </div>
+                <div class="space-x-4">
+                    <a href="https://t.me/FlashUSDTokens" target="_blank" class="btn bg-blue-600 text-white px-4 py-2 rounded-full">Join Telegram</a>
+                    <button onclick="addToMetaMask()" class="btn bg-yellow-500 text-black px-4 py-2 rounded-full flex items-center space-x-2">
+                        <img src="https://cdn.jsdelivr.net/gh/MetaMask/brand-resources@master/SVG/metamask-fox.svg" alt="MetaMask" class="h-5">
+                        <span>Add to MetaMask</span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center items-center text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold gradient-text">⚡ Flash USDT</h1>
+            <p class="text-lg mt-4">The Next Generation Stablecoin on Binance Smart Chain</p>
+        </section>
+
+        <!-- Contract Section -->
+        <section class="container mx-auto py-12 px-4">
+            <div class="bg-gray-800/30 rounded-lg p-6 text-center">
+                <h2 class="text-xl font-bold text-blue-400">Contract Address</h2>
+                <div class="mt-4 flex justify-center items-center space-x-4">
+                    <span id="contractAddress" class="text-gray-300">0x98bd98dac99ed529dA00370621fa06b52084f4ed</span>
+                    <button onclick="copyAddress()" class="btn bg-blue-600 text-white px-4 py-2 rounded-full">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 text-center">
+            <p>© 2024 Flash USDT. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Loader
+        window.addEventListener("load", () => {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("mainContent").style.opacity = "1";
+        });
+
+        // Copy Contract Address
+        function copyAddress() {
+            const address = document.getElementById("contractAddress").textContent;
+            navigator.clipboard.writeText(address);
+            alert("Contract address copied!");
+        }
+
+        // Add Token to MetaMask
+        async function addToMetaMask() {
+            if (window.ethereum) {
+                await ethereum.request({
+                    method: 'wallet_watchAsset',
+                    params: {
+                        type: 'ERC20',
+                        options: {
+                            address: '0x98bd98dac99ed529dA00370621fa06b52084f4ed',
+                            symbol: '$Tether',
+                            decimals: 18
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+      </html>
