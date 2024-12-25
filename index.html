@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
     <title>Flash USDT ($Tether) - Revolutionary Stablecoin | Binance Smart Chain</title>
     
     <!-- Primary SEO -->
@@ -106,10 +106,13 @@
                     <img src="logo/Logo.png" alt="Flash USDT" class="h-12">
                     <h1 class="text-2xl font-bold gradient-text">Flash USDT</h1>
                 </div>
-                <div class="space-x-4">
-                    <a href="https://t.me/FlashUSDTokens" target="_blank" class="btn bg-blue-600 text-white px-4 py-2 rounded-full">Join Telegram</a>
+                <div class="space-x-4 flex items-center">
+                    <a href="https://t.me/FlashUSDTokens" target="_blank" class="btn bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2">
+                        <img src="logo/Logo.png" alt="Telegram" class="h-5">
+                        <span>Join Telegram</span>
+                    </a>
                     <button onclick="addToMetaMask()" class="btn bg-yellow-500 text-black px-4 py-2 rounded-full flex items-center space-x-2">
-                        <img src="https://cdn.jsdelivr.net/gh/MetaMask/brand-resources@master/SVG/metamask-fox.svg" alt="MetaMask" class="h-5">
+                        <img src="logo/Logo.png" alt="MetaMask" class="h-5">
                         <span>Add to MetaMask</span>
                     </button>
                 </div>
@@ -164,7 +167,8 @@
                         options: {
                             address: '0x98bd98dac99ed529dA00370621fa06b52084f4ed',
                             symbol: '$Tether',
-                            decimals: 18
+                            decimals: 18,
+                            image: 'https://flashusdtokens.github.io/contracts/logo/Logo.png'
                         }
                     }
                 });
