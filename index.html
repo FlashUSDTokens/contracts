@@ -3,44 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash USDT - Ultra-Fast Crypto Transactions | Instant USDT Transfers</title>
+    <title>Flash USDT - Ultra-Fast Crypto Transactions</title>
     
-    <!-- Primary Meta Tags -->
-    <meta name="description" content="Experience ultra-fast USDT transactions with Flash USDT. A revolutionary platform for seamless crypto transfers across multiple blockchains.">
-    <meta name="keywords" content="flash usdt, crypto transactions, usdt transfers, blockchain, cryptocurrency, trc20, erc20, bsc, digital assets, secure transfers">
-    <meta name="author" content="Flash USDT Team">
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://flashusdt.com/">
-    <meta property="og:title" content="Flash USDT - Ultra-Fast Crypto Transactions">
-    <meta property="og:description" content="Revolutionize your USDT transfers with lightning-fast speeds. A secure and user-friendly platform for crypto enthusiasts.">
-    <meta property="og:image" content="/api/placeholder/1200/630">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://flashusdt.com/">
-    <meta name="twitter:title" content="Flash USDT - Ultra-Fast Crypto Transactions">
-    <meta name="twitter:description" content="Revolutionize your USDT transfers with lightning-fast speeds. A secure and user-friendly platform for crypto enthusiasts.">
-    <meta property="twitter:image" content="/api/placeholder/1200/630">
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#3b82f6">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <!-- Critical CSS inlined -->
     <style>
         :root {
-            --primary: #3b82f6;
+            --primary: #2563eb;
             --primary-dark: #1d4ed8;
-            --secondary: #10b981;
-            --accent: #8b5cf6;
+            --secondary: #059669;
+            --accent: #7c3aed;
             --background: #0f172a;
-            --text: #f1f5f9;
-            --text-dark: #64748b;
+            --text: #f8fafc;
+            --text-dark: #94a3b8;
         }
 
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -48,84 +29,48 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             background-color: var(--background);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Critical path styles */
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            border-radius: 4px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: background-color 0.2s;
             cursor: pointer;
         }
 
         .btn-primary {
             background-color: var(--primary);
-            color: #fff;
+            color: #ffffff;
         }
 
         .btn-primary:hover {
             background-color: var(--primary-dark);
         }
 
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: #fff;
-        }
-
-        .btn-secondary:hover {
-            opacity: 0.9;
-        }
-
-        .gradient-text {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        /* Navigation */
         .nav-container {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000;
-            background-color: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px);
+            z-index: 50;
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
         }
 
         .nav-content {
@@ -137,93 +82,39 @@
 
         .nav-logo {
             font-size: 1.5rem;
-            font-weight: bold;
+            font-weight: 700;
             color: var(--primary);
             text-decoration: none;
         }
 
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-link {
-            color: var(--text);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 80px;
+            padding-top: 4rem;
+            background: linear-gradient(160deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
-            z-index: -1;
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--primary);
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section {
-                padding: 60px 0;
-            }
-        }
-
-        /* Additional Sections */
-        #features, #how-it-works, #pricing, #testimonials, #faq {
-            scroll-margin-top: 80px;
-        }
-
-        .testimonial-image {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        footer {
-            background-color: rgba(15, 23, 42, 0.95);
-            padding: 3rem 0;
+        /* Performance optimized styles loaded after critical content */
+        .defer-styles {
+            display: none;
         }
     </style>
+
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="data:text/css;base64,LmNhcmR7YmFja2dyb3VuZDpyZ2JhKDI1NSwyNTUsMjU1LC4wNSk7Ym9yZGVyLXJhZGl1czouNXJlbTtwYWRkaW5nOjEuMjVyZW07dHJhbnNpdGlvbjp0cmFuc2Zvcm0gLjJzfS5jYXJkOmhvdmVye3RyYW5zZm9ybTp0cmFuc2xhdGVZKC00cHgpfS5zZWN0aW9ue3BhZGRpbmc6NHJlbSAwfS5ncmlke2Rpc3BsYXk6Z3JpZDtncmlkLXRlbXBsYXRlLWNvbHVtbnM6cmVwZWF0KGF1dG8tZml0LG1pbm1heCgyNTBweCwxZnIpKTtnYXA6MnJlbX0ubmF2LW1lbnV7ZGlzcGxheTpmbGV4O2dhcDoxLjVyZW07bGlzdC1zdHlsZTpub25lfS5uYXYtbGlua3tjb2xvcjp2YXIoLS10ZXh0KTt0ZXh0LWRlY29yYXRpb246bm9uZTt0cmFuc2l0aW9uOmNvbG9yIC4ycyt9Lm5hdi1saW5rOmhvdmVye2NvbG9yOnZhcigtLXByaW1hcnkpfUBtZWRpYShtYXgtd2lkdGg6NzY4cHgpey5uYXYtbWVudXtkaXNwbGF5Om5vbmV9fQ==" media="print" onload="this.media='all'">
+
+    <!-- Meta tags -->
+    <meta name="description" content="Ultra-fast USDT transactions with Flash USDT. Secure, seamless crypto transfers across multiple blockchains.">
+    <meta name="theme-color" content="#2563eb">
 </head>
 
 <body>
@@ -235,7 +126,6 @@
                 <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <a href="#get-started" class="btn btn-primary">Get Started</a>
         </nav>
@@ -243,96 +133,82 @@
 
     <main>
         <section class="hero">
-            <div class="container">
-                <h1 class="gradient-text">Revolutionize Your USDT Transfers</h1>
-                <p>Experience lightning-fast, secure, and seamless crypto transactions with Flash USDT.</p>
+            <div class="container" style="text-align: center;">
+                <h1 class="gradient-text" style="font-size: 3.5rem; margin-bottom: 1.5rem;">
+                    Ultra-Fast USDT Transfers
+                </h1>
+                <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem;">
+                    Experience lightning-fast crypto transactions with industry-leading security and multi-chain support.
+                </p>
                 <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="#get-started" class="btn btn-primary">Get Started</a>
-                    <a href="#learn-more" class="btn btn-secondary">Learn More</a>
+                    <a href="#get-started" class="btn btn-primary">Start Now</a>
+                    <a href="#features" class="btn btn-primary" style="background-color: var(--secondary);">Learn More</a>
                 </div>
             </div>
         </section>
 
         <section id="features" class="section">
             <div class="container">
-                <h2 class="gradient-text" style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">Why Choose Flash USDT?</h2>
+                <h2 class="gradient-text" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">
+                    Why Choose Flash USDT?
+                </h2>
                 <div class="grid">
                     <div class="card">
-                        <img src="/api/placeholder/64/64" alt="Multi-Chain Support" style="width: 64px; height: 64px; margin-bottom: 1rem;">
-                        <h3 style="margin-bottom: 1rem;">Multi-Chain Support</h3>
-                        <p>Transfer USDT seamlessly across TRC20, ERC20, and BSC networks.</p>
+                        <img src="/api/placeholder/48/48" alt="" width="48" height="48" style="margin-bottom: 1rem;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text);">Multi-Chain Support</h3>
+                        <p style="color: var(--text-dark);">Transfer USDT across TRC20, ERC20, and BSC networks seamlessly.</p>
                     </div>
                     <div class="card">
-                        <img src="/api/placeholder/64/64" alt="Wallet Integration" style="width: 64px; height: 64px; margin-bottom: 1rem;">
-                        <h3 style="margin-bottom: 1rem;">Wallet Integration</h3>
-                        <p>Connect with MetaMask, Trust Wallet, and major exchanges.</p>
+                        <img src="/api/placeholder/48/48" alt="" width="48" height="48" style="margin-bottom: 1rem;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text);">Instant Transfers</h3>
+                        <p style="color: var(--text-dark);">Lightning-fast transactions with minimal confirmation times.</p>
                     </div>
                     <div class="card">
-                        <img src="/api/placeholder/64/64" alt="Advanced Security" style="width: 64px; height: 64px; margin-bottom: 1rem;">
-                        <h3 style="margin-bottom: 1rem;">Advanced Security</h3>
-                        <p>Industry-leading encryption and multi-layer security protocols.</p>
+                        <img src="/api/placeholder/48/48" alt="" width="48" height="48" style="margin-bottom: 1rem;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text);">Bank-Grade Security</h3>
+                        <p style="color: var(--text-dark);">Advanced encryption and multi-layer security protocols.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Additional sections would follow the same pattern -->
-
-        <section id="get-started" class="section">
-            <div class="container" style="text-align: center;">
-                <h2 class="gradient-text" style="margin-bottom: 1.5rem;">Ready to Get Started?</h2>
-                <p style="margin-bottom: 2rem;">Join thousands of users already enjoying Flash USDT's benefits.</p>
-                <a href="#" class="btn btn-primary">Launch App</a>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer style="background-color: rgba(15, 23, 42, 0.95); padding: 3rem 0; margin-top: 4rem;">
         <div class="container">
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="grid">
                 <div>
                     <h3 class="gradient-text" style="margin-bottom: 1rem;">Flash USDT</h3>
-                    <p>Redefining crypto transactions with speed and security.</p>
+                    <p style="color: var(--text-dark);">Redefining crypto transactions with speed and security.</p>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 1rem;">Quick Links</h4>
+                    <h4 style="color: var(--text); margin-bottom: 1rem;">Quick Links</h4>
                     <ul style="list-style: none;">
-                        <li><a href="#features" class="nav-link">Features</a></li>
-                        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#features" class="nav-link">Features</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#how-it-works" class="nav-link">How It Works</a></li>
                         <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="margin-bottom: 1rem;">Connect</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" class="nav-link">Telegram</a></li>
-                        <li><a href="#" class="nav-link">Discord</a></li>
-                        <li><a href="mailto:support@flashusdt.com" class="nav-link">Email</a></li>
                     </ul>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <p>&copy; 2024 Flash USDT. All rights reserved.</p>
+                <p style="color: var(--text-dark);">&copy; 2024 Flash USDT. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Optimized JavaScript -->
     <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({behavior: 'smooth'});
+                    }
+                });
             });
         });
-
-        // Mobile menu functionality could be added here if needed
     </script>
 </body>
 </html>
