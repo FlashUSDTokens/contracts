@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,36 +15,22 @@
     <meta property="og:url" content="https://flashusdt.com/">
     <meta property="og:title" content="Flash USDT - Ultra-Fast Crypto Transactions">
     <meta property="og:description" content="Revolutionize your USDT transfers with lightning-fast speeds. A secure and user-friendly platform for crypto enthusiasts.">
-    <meta property="og:image" content="https://flashusdt.com/images/social-share.png">
+    <meta property="og:image" content="/api/placeholder/1200/630">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://flashusdt.com/">
     <meta name="twitter:title" content="Flash USDT - Ultra-Fast Crypto Transactions">
     <meta name="twitter:description" content="Revolutionize your USDT transfers with lightning-fast speeds. A secure and user-friendly platform for crypto enthusiasts.">
-    <meta name="twitter:image" content="https://flashusdt.com/images/social-share.png">
+    <meta property="twitter:image" content="/api/placeholder/1200/630">
     
-    <!-- Favicon and Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!-- Theme Color -->
     <meta name="theme-color" content="#3b82f6">
     
-    <!-- Preload Critical Assets -->
-    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/images/hero-bg.webp" as="image">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Critical CSS -->
     <style>
-        @font-face {
-            font-family: 'Inter var';
-            font-weight: 100 900;
-            font-display: swap;
-            font-style: normal;
-            src: url("/fonts/inter-var.woff2") format("woff2");
-        }
-
         :root {
             --primary: #3b82f6;
             --primary-dark: #1d4ed8;
@@ -56,13 +41,17 @@
             --text-dark: #64748b;
         }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter var', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--background);
             color: var(--text);
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
         }
 
         .container {
@@ -96,13 +85,14 @@
         }
 
         .btn-secondary:hover {
-            background-color: #059669;
+            opacity: 0.9;
         }
 
         .gradient-text {
             background: linear-gradient(45deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .card {
@@ -127,24 +117,14 @@
             gap: 30px;
         }
 
-        .animate-fade-in {
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Navigation styles */
+        /* Navigation */
         .nav-container {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(10px);
         }
 
@@ -152,7 +132,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 1rem;
         }
 
         .nav-logo {
@@ -164,455 +144,195 @@
 
         .nav-menu {
             display: flex;
-            gap: 20px;
-        }
-
-        .nav-item {
-            position: relative;
+            gap: 2rem;
+            list-style: none;
         }
 
         .nav-link {
             color: var(--text);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
         .nav-link:hover {
             color: var(--primary);
         }
 
-        .nav-dropdown {
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
             position: absolute;
-            top: 100%;
+            top: 0;
             left: 0;
-            background-color: var(--background);
-            border-radius: 4px;
-            padding: 10px;
-            min-width: 180px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            z-index: -1;
         }
 
-        .nav-item:hover .nav-dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .nav-dropdown-link {
-            display: block;
-            padding: 8px 12px;
-            color: var(--text);
-            text-decoration: none;
-            transition: background-color 0.3s ease;
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
         }
 
-        .nav-dropdown-link:hover {
-            background-color: rgba(59, 130, 246, 0.1);
-        }
-
-        /* Media Queries */
-        @media (max-width: 767px) {
+        /* Responsive Design */
+        @media (max-width: 768px) {
             .nav-menu {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: var(--background);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 16px;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(-100%);
-                transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+                display: none;
             }
 
-            .nav-item {
-                opacity: 0;
-                transform: translateY(-10px);
-                transition: opacity 0.3s ease, transform 0.3s ease;
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
-            .nav-link {
-                font-size: 1.2rem;
+            .section {
+                padding: 60px 0;
             }
+        }
 
-            .nav-dropdown {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                padding: 0;
-            }
+        /* Additional Sections */
+        #features, #how-it-works, #pricing, #testimonials, #faq {
+            scroll-margin-top: 80px;
+        }
 
-            .nav-dropdown-link {
-                padding: 12px 20px;
-            }
+        .testimonial-image {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
 
-            .nav-toggle {
-                display: block;
-                position: relative;
-                width: 30px;
-                height: 20px;
-                cursor: pointer;
-            }
-
-            .nav-toggle span,
-            .nav-toggle::before,
-            .nav-toggle::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background-color: var(--text);
-                transition: transform 0.3s ease;
-            }
-
-            .nav-toggle::before {
-                top: 0;
-            }
-
-            .nav-toggle::after {
-                bottom: 0;
-            }
-
-            .nav-toggle.active span {
-                transform: scaleX(0);
-            }
-
-            .nav-toggle.active::before {
-                transform: translateY(10px) rotate(45deg);
-            }
-
-            .nav-toggle.active::after {
-                transform: translateY(-10px) rotate(-45deg);
-            }
-
-            .nav-menu.active {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-            }
-
-            .nav-item.active {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        footer {
+            background-color: rgba(15, 23, 42, 0.95);
+            padding: 3rem 0;
         }
     </style>
-
-    <!-- Deferred CSS -->
-    <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'">
 </head>
 
 <body>
     <header class="nav-container">
         <nav class="container nav-content">
-            <a href="/" class="nav-logo">Flash USDT</a>
-            <div class="nav-toggle" onclick="toggleMenu()">
-                <span></span>
-            </div>
+            <a href="#" class="nav-logo">Flash USDT</a>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#features" class="nav-link">Features</a>
-                    <ul class="nav-dropdown">
-                        <li><a href="#multi-chain" class="nav-dropdown-link">Multi-Chain Support</a></li>
-                        <li><a href="#wallet-integration" class="nav-dropdown-link">Wallet Integration</a></li>
-                        <li><a href="#security" class="nav-dropdown-link">Advanced Security</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#how-it-works" class="nav-link">How It Works</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#pricing" class="nav-link">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#faq" class="nav-link">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <a href="#get-started" class="btn btn-primary">Get Started</a>
         </nav>
     </header>
 
-    <main id="main-content">
-        <section id="hero" class="min-h-screen flex items-center justify-center text-center" style="background-image: url('/images/hero-bg.webp'); background-size: cover; background-position: center;">
-            <div class="container animate-fade-in">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">Revolutionize Your USDT Transfers</h1>
-                <p class="text-xl mb-8 max-w-2xl mx-auto">Experience lightning-fast, secure, and seamless crypto transactions with Flash USDT.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="gradient-text">Revolutionize Your USDT Transfers</h1>
+                <p>Experience lightning-fast, secure, and seamless crypto transactions with Flash USDT.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
                     <a href="#get-started" class="btn btn-primary">Get Started</a>
                     <a href="#learn-more" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="section bg-gray-900">
+        <section id="features" class="section">
             <div class="container">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Why Choose Flash USDT?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div id="multi-chain" class="card">
-                        <img src="/images/multi-chain.svg" alt="Multi-Chain Support" class="w-16 h-16 mb-4">
-                        <h3 class="text-xl font-bold mb-4">Multi-Chain Support</h3>
-                        <p>Transfer USDT seamlessly across TRC20, ERC20, and BSC networks with unmatched speed and ease.</p>
+                <h2 class="gradient-text" style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">Why Choose Flash USDT?</h2>
+                <div class="grid">
+                    <div class="card">
+                        <img src="/api/placeholder/64/64" alt="Multi-Chain Support" style="width: 64px; height: 64px; margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 1rem;">Multi-Chain Support</h3>
+                        <p>Transfer USDT seamlessly across TRC20, ERC20, and BSC networks.</p>
                     </div>
-                    <div id="wallet-integration" class="card">
-                        <img src="/images/wallet-integration.svg" alt="Wallet Integration" class="w-16 h-16 mb-4">
-                        <h3 class="text-xl font-bold mb-4">Wallet Integration</h3>
-                        <p>Connect effortlessly with MetaMask, Trust Wallet, and major exchanges for a seamless experience.</p>
+                    <div class="card">
+                        <img src="/api/placeholder/64/64" alt="Wallet Integration" style="width: 64px; height: 64px; margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 1rem;">Wallet Integration</h3>
+                        <p>Connect with MetaMask, Trust Wallet, and major exchanges.</p>
                     </div>
-                    <div id="security" class="card">
-                        <img src="/images/security.svg" alt="Advanced Security" class="w-16 h-16 mb-4">
-                        <h3 class="text-xl font-bold mb-4">Advanced Security</h3>
-                        <p>Enjoy peace of mind with our industry-leading encryption and multi-layer security protocols.</p>
+                    <div class="card">
+                        <img src="/api/placeholder/64/64" alt="Advanced Security" style="width: 64px; height: 64px; margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 1rem;">Advanced Security</h3>
+                        <p>Industry-leading encryption and multi-layer security protocols.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="how-it-works" class="section">
-            <div class="container">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">How Flash USDT Works</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <ol class="space-y-6">
-                            <li class="flex items-center">
-                                <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">1</span>
-                                <p>Connect your wallet to Flash USDT.</p>
-                            </li>
-                            <li class="flex items-center">
-                                <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">2</span>
-                                <p>Choose your preferred blockchain network.</p>
-                            </li>
-                            <li class="flex items-center">
-                                <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">3</span>
-                                <p>Enter the recipient's address and amount.</p>
-                            </li>
-                            <li class="flex items-center">
-                                <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">4</span>
-                                <p>Confirm and send your USDT instantly.</p>
-                            </li>
-                        </ol>
-                    </div>
-                    <div>
-                        <img src="/images/how-it-works.webp" alt="How Flash USDT Works" class="rounded-lg shadow-2xl">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Additional sections would follow the same pattern -->
 
-        <section id="pricing" class="section bg-gray-900">
-            <div class="container">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Transparent Pricing Plans</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="card text-center">
-                        <h3 class="text-2xl font-bold mb-4">Basic</h3>
-                        <p class="text-4xl font-bold mb-6">Free</p>
-                        <ul class="mb-6 space-y-2">
-                            <li>Up to 100 USDT transfers/month</li>
-                            <li>Basic support</li>
-                            <li>Single blockchain support</li>
-                        </ul>
-                        <a href="#get-started" class="btn btn-primary w-full">Get Started</a>
-                    </div>
-                    <div class="card text-center border-2 border-primary relative">
-                        <span class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm">Most Popular</span>
-                        <h3 class="text-2xl font-bold mb-4">Pro</h3>
-                        <p class="text-4xl font-bold mb-6">$19.99/mo</p>
-                        <ul class="mb-6 space-y-2">
-                            <li>Unlimited USDT transfers</li>
-                            <li>Priority support</li>
-                            <li>Multi-chain support</li>
-                            <li>Advanced analytics</li>
-                        </ul>
-                        <a href="#get-started" class="btn btn-primary w-full">Choose Pro</a>
-                    </div>
-                    <div class="card text-center">
-                        <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
-                        <p class="text-4xl font-bold mb-6">Custom</p>
-                        <ul class="mb-6 space-y-2">
-                            <li>Custom solutions</li>
-                            <li>Dedicated account manager</li>
-                            <li>API access</li>
-                            <li>24/7 premium support</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-secondary w-full">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section">
-            <div class="container">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">What Our Users Say</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="card">
-                        <p class="mb-4">"Flash USDT has transformed my crypto trading experience. The speed and security are truly impressive!" - John Doe, Crypto Enthusiast</p>
-                        <div class="flex items-center">
-                            <img src="/images/testimonial-1.jpg" alt="John Doe" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <h4 class="font-bold">John Doe</h4>
-                                <p class="text-sm text-gray-400">Crypto Enthusiast</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="mb-4">"As a business owner, Flash USDT has made international payments a breeze. Highly recommended!" - Sarah Smith, E-commerce Store Owner</p>
-                        <div class="flex items-center">
-                            <img src="/images/testimonial-2.jpg" alt="Sarah Smith" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <h4 class="font-bold">Sarah Smith</h4>
-                                <p class="text-sm text-gray-400">E-commerce Store Owner</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <p class="mb-4">"The multi-chain support is a game-changer. I can manage my USDT effortlessly across different networks." - Mike Johnson, Blockchain Developer</p>
-                        <div class="flex items-center">
-                            <img src="/images/testimonial-3.jpg" alt="Mike Johnson" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <h4 class="font-bold">Mike Johnson</h4>
-                                <p class="text-sm text-gray-400">Blockchain Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="section bg-gray-900">
-            <div class="container">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Frequently Asked Questions</h2>
-                <div class="space-y-6 max-w-3xl mx-auto">
-                    <div class="card">
-                        <h3 class="text-xl font-bold mb-2">What is Flash USDT?</h3>
-                        <p>Flash USDT is a cutting-edge platform designed to facilitate fast, secure, and efficient USDT transactions across multiple blockchain networks.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="text-xl font-bold mb-2">How secure is Flash USDT?</h3>
-                        <p>We prioritize security with state-of-the-art encryption, multi-factor authentication, and regular security audits to protect your transactions and data.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="text-xl font-bold mb-2">Can I use my existing crypto wallet with Flash USDT?</h3>
-                        <p>Absolutely! Flash USDT is compatible with popular wallets like MetaMask, Trust Wallet, and more. Connect your wallet for a seamless experience.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="text-xl font-bold mb-2">Are there any transaction limits?</h3>
-                        <p>Transaction limits vary based on your plan. Basic accounts have a monthly limit, while Pro and Enterprise plans offer higher or unlimited transaction volumes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="get-started" class="section bg-gray-900">
-            <div class="container text-center">
-                <h2 class="text-3xl font-bold mb-6 gradient-text">Join the Crypto Revolution with Flash USDT</h2>
-                <p class="text-xl mb-8">Experience the future of crypto transactions. Sign up now and enjoy lightning-fast USDT transfers.</p>
-                <a href="#" class="btn btn-primary text-lg px-8 py-3">Get Started Now</a>
+        <section id="get-started" class="section">
+            <div class="container" style="text-align: center;">
+                <h2 class="gradient-text" style="margin-bottom: 1.5rem;">Ready to Get Started?</h2>
+                <p style="margin-bottom: 2rem;">Join thousands of users already enjoying Flash USDT's benefits.</p>
+                <a href="#" class="btn btn-primary">Launch App</a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 py-12">
+    <footer>
         <div class="container">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 gradient-text">Flash USDT</h3>
-                    <p>Redefining crypto transactions with speed, security, and innovation.</p>
+                    <h3 class="gradient-text" style="margin-bottom: 1rem;">Flash USDT</h3>
+                    <p>Redefining crypto transactions with speed and security.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#features" class="hover:text-primary transition-colors">Features</a></li>
-                        <li><a href="#how-it-works" class="hover:text-primary transition-colors">How It Works</a></li>
-                        <li><a href="#pricing" class="hover:text-primary transition-colors">Pricing</a></li>
-                        <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                    <h4 style="margin-bottom: 1rem;">Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#features" class="nav-link">Features</a></li>
+                        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                        <li><a href="#pricing" class="nav-link">Pricing</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/terms" class="hover:text-primary transition-colors">Terms of Service</a></li>
-                        <li><a href="/privacy" class="hover:text-primary transition-colors">Privacy Policy</a></li>
-                        <li><a href="/disclaimer" class="hover:text-primary transition-colors">Disclaimer</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Connect With Us</h4>
-                    <ul class="space-y-2">
-                        <li><a href="https://t.me/FlashUSDTokens" class="hover:text-primary transition-colors">Telegram</a></li>
-                        <li><a href="https://discord.gg/FlashUSDTokens" class="hover:text-primary transition-colors">Discord</a></li>
-                        <li><a href="mailto:support@FlashUSDTokens.com" class="hover:text-primary transition-colors">Email Us</a></li>
+                    <h4 style="margin-bottom: 1rem;">Connect</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#" class="nav-link">Telegram</a></li>
+                        <li><a href="#" class="nav-link">Discord</a></li>
+                        <li><a href="mailto:support@flashusdt.com" class="nav-link">Email</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
                 <p>&copy; 2024 Flash USDT. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            const navToggle = document.querySelector('.nav-toggle');
-            const navItems = document.querySelectorAll('.nav-item');
-
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-
-            navItems.forEach(item => {
-                item.classList.toggle('active');
-            });
-        }
-
-        // Add your JavaScript here
-        document.addEventListener('DOMContentLoaded', () => {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            // Fade-in elements on scroll
-            const fadeInElements = document.querySelectorAll('.animate-fade-in');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            fadeInElements.forEach(element => {
-                observer.observe(element);
-            });
-
-            // Form submission
-            const contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', function(e) {
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                // Here you can handle form submission, e.g., send data to server
-                alert('Form submitted successfully!');
-                contactForm.reset();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
+
+        // Mobile menu functionality could be added here if needed
     </script>
 </body>
 </html>
